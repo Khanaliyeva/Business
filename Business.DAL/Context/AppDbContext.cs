@@ -23,5 +23,6 @@ namespace Business.DAL.Context
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<AppUser> Users { get; set; }
     }
 }
