@@ -56,7 +56,6 @@ namespace Business.MVC.Areas.Manage.Controllers
 
 
 
-
         [HttpGet]
         //[Authorize("Admin")]
         public async Task<IActionResult> Update(int id)

@@ -1,6 +1,4 @@
-﻿
-@using Business.Core.Entity
-﻿﻿
+﻿@using Business.Core.Entity﻿﻿
 @model IQueryable<Blog>
 @{
     int count = 0;
@@ -8,7 +6,7 @@
 <div class="container" style="margin-top: 100px">
     <div class="d-flex" style="justify-content:space-between;align-items:center;">
         <h1>Blogs</h1>
-        <a class="btn btn-primary" asp-controller="Portfolio" asp-action="Create">Create</a>
+        <a class="btn btn-primary" asp-controller="Blog" asp-action="Create">Create</a>
     </div>
     <table class="table">
         <thead>
@@ -30,13 +28,13 @@
                     <td>@item.Description</td>
                     <td>
                         <div style="width:100px">
-                            <img width=100% src="~/Upload/PortfolioImages/@item.ImgUrl">
+                            <img width=100% src="~/Upload/BlogImages/@item.ImgUrl">
                         </div>
                     </td>
 
                     <td>
-                        <a class="btn btn-primary" asp-controller="Portfolio" asp-action="Update" asp-route-id=@item.Id>Update</a>
-                        <a class="btn btn-danger item-delete" asp-controller="Portfolio" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
+                        <a class="btn btn-primary" asp-controller="Blog" asp-action="Update" asp-route-id=@item.Id>Update</a>
+                        <a class="btn btn-danger item-delete" asp-controller="Blog" asp-action="Delete" asp-route-id=@item.Id>Delete</a>
                     </td>
                 </tr>
             }
